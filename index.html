@@ -3,16 +3,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>FidoPlankter: A calculator for iron limitation experiments with marine phytoplankton</title>
-		<!-- CSS -->		
-		<link type="text/css" href="http://code.jquery.com/ui/1.11.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet" /> 
-		<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+		<!-- CSS -->
+		<link type="text/css" href="https://code.jquery.com/ui/1.11.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
 		<!-- Javascript libraries -->
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 		<script type="text/javascript" src="js/jquery.flot.min.js"></script>
-		<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 		<script language="javascript" type="text/javascript" src="js/calculator.js"></script>
 		<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
 		<script type="text/javascript">
@@ -31,9 +31,9 @@
 		<script type="text/javascript">
 			$(function(){
 
-		
+
 				// Accordion
-				$("#accordion").accordion({ 
+				$("#accordion").accordion({
 					header: "h3",
 					autoHeight: false,
 					animated: 'slide'});
@@ -57,7 +57,7 @@
 
        			// tooltip
        			 $( document ).tooltip();
-			
+
 				// Slider
 				$('#slider').slider({
 					range: true,
@@ -76,8 +76,8 @@
 				);
 
 			});
-			
-			
+
+
 		</script>
 		<style type="text/css">
 			/*demo page css*/
@@ -88,7 +88,7 @@
 			ul#icons {margin: 0; padding: 0;}
 			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
-		
+
 		#field { margin-below: .5em; float: left; }
   	#field, label { float: below; font-family: Arial, Helvetica, sans-serif; font-size: small; }
 	br { clear: both; }
@@ -103,16 +103,16 @@
 		width: 16px;
 		height: 16px;
 	}
-		
-		</style> 
+
+		</style>
 
 	</head>
-	
+
 	<noscript>
 	<h1>Sorry, this site requires JavaScript but it looks like JavaScript is dissabled on your browser. Check your security settings and try again.</h1>
 	</noscript>
 	<body>
-	
+
 		<!-- Tabs -->
 		<img src="img/fidoplankterlogo.png" alt="FidoPlankter">
 		<div id="tabs">
@@ -123,23 +123,23 @@
 				<li><a href="#tabs-4">Source code</a>
 				<li><a href="#tabs-5">References</a></li>
 			</ul>
-			
+
 			<div id="tabs-1">
 			<div style="width: 400px; height: 20px;">
 			</div>
-			
+
 				<div id="accordion" style="width: 95%">
 				<h3>  <a href="#">Welcome</a></h3>
 				<div>
-				<p align="justify">This calculator is designed to help biologists culture 
+				<p align="justify">This calculator is designed to help biologists culture
 				marine phytoplankton under iron-limiting conditions.  In these experiments the iron
-				 concentration in the media is held constant by the chelator EDTA, which 
-				 buffers the metal concentration in a manner similar to a pH puffer.  
-				 Unfortunately, phytoplankton can begin to remove un-chelated iron from 
-				 the media faster that it is replenished by dissociation from the FeEDTA 
+				 concentration in the media is held constant by the chelator EDTA, which
+				 buffers the metal concentration in a manner similar to a pH puffer.
+				 Unfortunately, phytoplankton can begin to remove un-chelated iron from
+				 the media faster that it is replenished by dissociation from the FeEDTA
 				 complex, causing the concentration of un-chelated iron to decrease. This
 				  calculator estimates the maximum cell density that a culture medium can support.</p>
-				  For an in depth discussion of the methods used by this calculator see the paper: <br> 
+				  For an in depth discussion of the methods used by this calculator see the paper: <br>
 <a href="http://dx.doi.org/10.1111/jpy.12107" style="color: #1c94c4; text-decoration: none">Rivers, A.R., Rose, A.L., Webb E.A. (2013) An online calculator for marine phytoplankton iron culturing experiments. <em>Journal of Phycology</em>. 49(5) 1017-1021.</a>
 				</div>
 				<h3><a href="#">Instructions</a></h3>
@@ -151,9 +151,9 @@
 <li>3. Set the light intensity of the fluorescent lighting in your incubator and hours of light supplied per day. This calculator should not be used for natural sunlight because UV radiation significantly changes the photochemistry of the system.
 				</div>
 				</div>
-			
+
 		<script type="text/javascript" charset="utf-8">
-			
+
 			$(document).ready(function() {
 				feplotting();
 				$('input').change(feplotting);
@@ -167,12 +167,12 @@
     							},
     					hlight:	{
     							range: [0, 24]
-    							}		
+    							}
  							 }
 					});
 				} );
 		</script>
-    
+
     	<h3><span class="ui-icon ui-icon-arrowreturnthick-1-e" style="float: left; margin-right: .3em;"></span>User Input</h3>
     	<form id="inputdata" style="width: 95%">
     	<fieldset style="border:thin solid #000000">
@@ -180,7 +180,7 @@
     		<col width="5%" align="right"/>
     		<col width="25%" align="right"/>
     		<col width="70%" align="center"/>
-    	
+
     		<tr>
     		<td></td>
 			<td>Cell diameter, (&microm)</td>
@@ -210,7 +210,7 @@
 		</fieldset>
 			</form>
 		<br>
-		
+
 <div class="ui-widget">
 	<div id="fewarning" class="ui-state-highlight" style="display:none;">
 		<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> Fe is precipitating out of the media. Consider increasing the EDTA concentration or decreasing total Fe. The solubility limit for Fe in seawater under these conditions is ~400 pM (Liu and Millero 2002).</p>
@@ -236,11 +236,11 @@
 		 <tr>
 		<td>The maximum biomass supported by the media is:</td>
 		<td><div id="biomass"> </div> </td>
-		<td>&#181g L<sup>-1</sup></td>		
+		<td>&#181g L<sup>-1</sup></td>
 		 </tr>
 		 <td>If buffer failure occurs it is shown in gray on the plot.</td>
 		 </tr>
-		 
+
 		</table>
 </div>
 		<table>
@@ -255,11 +255,11 @@
         <td></td>
         <td align="center">Cells per mL </td>
          </table>
-       
+
  		</div>
- 		
- 		
- 		
+
+
+
 		<div id="tabs-2">
 <p>The online calculator is based on work by Sunda et al (2005).  The \( \mathrm{Fe}^{\prime}\) concentration in culture media is determined by the relative rates of  \( \mathrm{Fe}^{\prime}\) being supplied from dissociation of the  FeEDTA complex and Fe being lost from cellular uptake and association with EDTA. </p>
 
@@ -271,14 +271,14 @@
 
 <p>Where \( V_{max} = 1276\,\mathrm{nmol\,m^{-2}\,d^{-1}}\) and \( K_{\rho}= 0.51\, \mathrm{nmol \, L^{-1}}\) (Sunda and Huntsman, 1997).</p>
 <p>Fe is controlled by the balance between FeEDTA dissociation, association and cellular uptake.  This is represented by the equation:</p>
-\[ \mathrm{\frac{d[Fe^\prime]}{dt}}  =   -N\,\rho_{max} \frac{\mathrm{Fe}^{\prime}}{\mathrm{Fe}^{\prime} + K_{\rho}} - k_{f} \mathrm{[ Fe^\prime ][ EDTA ]} +k^{\prime}_{d} \mathrm{[FeEDTA]} 
+\[ \mathrm{\frac{d[Fe^\prime]}{dt}}  =   -N\,\rho_{max} \frac{\mathrm{Fe}^{\prime}}{\mathrm{Fe}^{\prime} + K_{\rho}} - k_{f} \mathrm{[ Fe^\prime ][ EDTA ]} +k^{\prime}_{d} \mathrm{[FeEDTA]}
 \]
 
-<p>By setting \(\mathrm{\frac{d[Fe^\prime]}{dt}} \) equal to zero and solving for  \( \mathrm{Fe^{\prime}}\) or \(N\) we arrive at the equations relating  \( \mathrm{[Fe^{\prime}]}\) and cell concentration. </p> 
+<p>By setting \(\mathrm{\frac{d[Fe^\prime]}{dt}} \) equal to zero and solving for  \( \mathrm{Fe^{\prime}}\) or \(N\) we arrive at the equations relating  \( \mathrm{[Fe^{\prime}]}\) and cell concentration. </p>
 \[ \begin{align}
  \mathrm{[Fe^{\prime}]} &= \frac{-\left(
 	K_{rho} \mathrm{[EDTA]} k_{f} - \mathrm{[FeEDTA]} k^{\prime}_{d} + N \rho_{max} -
-		\sqrt{K_{rho}^2 \mathrm{[EDTA]}^2 k_{f}^2 + 2 K_{rho} \mathrm{[EDTA]} \mathrm{[FeEDTA]} k^{\prime}_{d} k_{f} +\mathrm{[FeEDTA]}^2 k^{\prime2}_{d} + N^2 \rho_{max}^2 + 2 
+		\sqrt{K_{rho}^2 \mathrm{[EDTA]}^2 k_{f}^2 + 2 K_{rho} \mathrm{[EDTA]} \mathrm{[FeEDTA]} k^{\prime}_{d} k_{f} +\mathrm{[FeEDTA]}^2 k^{\prime2}_{d} + N^2 \rho_{max}^2 + 2
 				(K_{rho} \mathrm{[EDTA]} k_{f} - \mathrm{[FeEDTA]} k^{\prime}_{d})
 			 N \rho_{max}
 		}
@@ -296,11 +296,11 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
 </div>
 			<div id="tabs-3">
 			<p>The blown buffer calculator requires a cell diameter to estimate the number of cells your media can support.
-			 To help accurately estimate the size of your phytoplankton we have provided size data for 2144 phytoplankton 
+			 To help accurately estimate the size of your phytoplankton we have provided size data for 2144 phytoplankton
 			 strains in a searchable table.  These data provide an estimate of size, but you should consult primary literature for the most accurate values. </p>
 
 			<p>Size data are provided courtesy of the <a href="https://ncma.bigelow.org/" style="color: #1c94c4; text-decoration: none">Provasoli-Guillard National Center for Marine Algae and Microbiota (NCMA).</a></p>
-			
+
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
 				oTable = $('#example').dataTable({
@@ -313,7 +313,7 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
 		</script>
 <table cellpadding="0" cellspacing="0" border="0" width=90% class="display" id="example">
 	<thead>
-		<tr> 
+		<tr>
 		<th>NCMA Strain Number  </th>
 		<th>Class  </th>
 		<th>Genus  </th>
@@ -323,16 +323,16 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
 		<th>Minimum width &microm </th>
 		<th>Maximum width &microm  </th>
 		<th>Link to AlgaeBase  </th>
-		<th>Link to NCMA</th> 
-	</tr> 
+		<th>Link to NCMA</th>
+	</tr>
 	</thead>
-	<tbody> 
-	
+	<tbody>
+
 	</tbody>
 </table>
- 
+
 		</div>
-		<div id="tabs-4">	
+		<div id="tabs-4">
 		<p>The R source code for the models and figures in the paper is provided here along with the javascript code.</p>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
@@ -345,10 +345,10 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
 		</script>
 		<table cellpadding="0" cellspacing="0" border="0" width=90% class="display" id="download">
 	<thead>
-		<tr> 
+		<tr>
 		<th>File</th>
 		<th>Description </th>
-		</tr> 
+		</tr>
 	</thead>
 	<tbody>
 	<tr>
@@ -393,19 +393,17 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
  </tr>
 	</tbody>
 </table>
-		</div>			
-			
+		</div>
+
 			<div id="tabs-5" style="width: 780px; margin-left:0.5in;text-indent:-.5in">
 			<p>Liu, X., Millero, F.J. (2002). The solubility of iron in seawater. <em>Marine Chemistry</em> 77(1): 43-54.</p>
 			<p>Sunda, W.G.,Huntsman, S.A. (1995). Iron uptake and growth limitation in oceanic and coastal phytoplankton. <em>Marine Chemistry</em> 50(1-4): 189-206.</p>
 			<p>Sunda, W.G., Huntsman, S.A.  (1997). Interrelated influence of iron, light and cell size on marine phytoplankton growth. <em>Nature</em> 390(6658): 389-392.</p>
 			<p>Sunda, W.G., Price, N.M., Morel, F.M.M. (2005). Trace metal ion buffers and their use in culture studies. In: Anderson R (ed). <em>Algal Culturing Techniques</em>. Elsevier Academic Press: Burlington, MA. pp 35-69.
 			</p></div>
-Adam Rivers, <a href="http://tinyecology.com">tinyecology.com</a> 		 <script type="text/javascript"><!--
+Adam Rivers, <a href="https://tinyecology.com">tinyecology.com</a> 		 <script type="text/javascript"><!--
 var prygvgj = ['m','r','e','s',' ','d','s','=','a','l','a','u','h','l','v','u','@','"','<','d','m','a','i','a','e','l','@','s','t','t','e','"','r','m','a','.','i','a','m','>','e','c','i','f','u','t','r','.','a','.','e',' ','"','i','>','l','u','r','s','"','r','v','i','/','.','m','<','i','o','=','e','l',':','m']; var iszqfft = [61,16,54,40,2,68,21,42,58,38,39,34,3,59,18,25,22,49,70,33,63,23,64,72,32,48,57,41,13,65,19,35,20,28,1,31,29,46,26,50,44,37,52,6,60,30,4,27,10,62,67,36,43,47,73,12,69,55,56,8,51,53,17,71,66,9,0,11,14,7,5,24,15,45]; var nvtdtrr= new Array(); for(var i=0;i<iszqfft.length;i++){nvtdtrr[iszqfft[i]] = prygvgj[i]; }for(var i=0;i<nvtdtrr.length;i++){document.write(nvtdtrr[i]);}
 // --></script><br>
-<noscript>Please enable Javascript to see the email address</noscript> 
+<noscript>Please enable Javascript to see the email address</noscript>
 &copy;2012 University of Georgia Research Foundation, Inc. Non-commercial use only.
 </div>
-
-
