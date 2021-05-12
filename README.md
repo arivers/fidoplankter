@@ -1,4 +1,7 @@
+
 ![Fidoplankter: software for iron limitation experiments](img/fidoplankterlogo.png)
+
+[![DOI](https://zenodo.org/badge/362187113.svg)](https://zenodo.org/badge/latestdoi/362187113)
 
 ## Take me to the web app!
 
