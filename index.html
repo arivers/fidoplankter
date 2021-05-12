@@ -4,17 +4,17 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>FidoPlankter: A calculator for iron limitation experiments with marine phytoplankton</title>
 		<!-- CSS -->
-		<link type="text/css" href="https://code.jquery.com/ui/1.11.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+		<link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css" rel="stylesheet" />
+	<link type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
 		<!-- Javascript libraries -->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-		<script type="text/javascript" src="js/jquery.flot.min.js"></script>
-		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+		<script language="javascript" type="text/javascript" src="js/jquery.flot.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/4.2.2/jquery.flot.js" integrity="sha512-GzTUEIEYsUnIsjjeFHNxX9mO4JTRcztouKrHl8ZejyU067oDfhhAd4mpOHygKkiXRuJr+AHF/v3y42Nk/LrvUw==" crossorigin="anonymous"></script> -->
 		<script language="javascript" type="text/javascript" src="js/calculator.js"></script>
-		<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
 		<script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -44,7 +44,7 @@
 				// Dialog
 				$('#dialog').dialog({
 					autoOpen: false,
-					width: 600,
+					width: 800,
 					buttons: {
 						"Ok": function() {
 							$(this).dialog("close");
@@ -125,7 +125,7 @@
 			</ul>
 
 			<div id="tabs-1">
-			<div style="width: 400px; height: 20px;">
+			<div style="width: 400px;">
 			</div>
 
 				<div id="accordion" style="width: 95%">
@@ -236,7 +236,7 @@
 		 <tr>
 		<td>The maximum biomass supported by the media is:</td>
 		<td><div id="biomass"> </div> </td>
-		<td>&#181g L<sup>-1</sup></td>
+		<td> &#181g L<sup>-1</sup></td>
 		 </tr>
 		 <td>If buffer failure occurs it is shown in gray on the plot.</td>
 		 </tr>
@@ -245,9 +245,9 @@
 </div>
 		<table>
    		<td>Fe' (pM)</td>
-   		<td><div id="plot1" style="width:342px; height: 260px;"></div></td>
+   		<td><div id="plot1" style="width:342px;height:260px"></div></td>
         <td>Fe' (pM)</td>
-        <td><div id="plot2" style="width:342px; height: 260px;"></div></td>
+        <td><div id="plot2" style="width:342px;height:260px"></div></td>
         </tr>
         <tr>
         <td></td>
@@ -305,7 +305,7 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
 			$(document).ready(function() {
 				oTable = $('#example').dataTable({
 					"bProcessing": true,
-					"sAjaxSource": "js/ncma.txt",
+					"sAjaxSource": "js/ncma.json",
 					"iDisplayLength":25,
 					"bJQueryUI": true
 				});
@@ -333,66 +333,8 @@ N &= \frac{-(\mathrm{[EDTA]} \mathrm{[Fe}^{\prime}]kf - \mathrm{[Fe}^{\prime}]\m
 
 		</div>
 		<div id="tabs-4">
-		<p>The R source code for the models and figures in the paper is provided here along with the javascript code.</p>
-		<script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				oTable = $('#download').dataTable({
-					"iDisplayLength":10,
-					"bJQueryUI": true,
-					'bAutoWidth': false
-				});
-			} );
-		</script>
-		<table cellpadding="0" cellspacing="0" border="0" width=90% class="display" id="download">
-	<thead>
-		<tr>
-		<th>File</th>
-		<th>Description </th>
-		</tr>
-	</thead>
-	<tbody>
-	<tr>
-  <td><a href="code/Readme.txt">Readme.txt</a></td>
-  <td>Description of contents</td>
- </tr>
-  <tr>
-  <td><a href="code/ModelFunc.R">ModelFunc.R</a></td>
-  <td>R code of general functions in used in the models</td>
-</tr>
- <tr>
-  <td><a href="code/Fig2.R">Fig2.R</a></td>
-  <td>R code to run simulations and plot Figure 2</td>
- </tr>
- <tr>
-   <td><a href="code/Fig3.R">Fig3.R</a></td>
-   <td>R code to run simulations and plot Figure 3</td>
- </tr>
- <tr>
-   <td><a href="code/Fig4.R">Fig4.R</a></td>
-   <td>R code to run simulations and plot Figure 4</td>
- </tr>
- <tr>
-   <td><a href="code/Fig5.R">Fig5.R</a></td>
-   <td>R code to run simulations and plot Figure 5</td>
- </tr>
- <tr>
-  <td><a href="code/suppFig1.R">suppFig1.R</a></td>
-  <td>R code to run simulations and plot Figure S1</td>
- </tr>
- <tr>
-   <td><a href="code/sundahuntsman1995data.csv">sundahuntsman1995data.csv</a></td>
-   <td>Data from Sunda and Huntsman (1995) used in Figures 4 and S1</td>
- </tr>
- <tr>
-   <td><a href="js/calculator.js">calculator.js</a></td>
-   <td>The javascript code used by the online calculator to estimate buffer failure</td>
- </tr>
- <tr>
-   <td><a href="code/alldata.zip">alldata.zip</a></td>
-   <td>All files</td>
- </tr>
-	</tbody>
-</table>
+		<p>The R source code for the models and figures in the paper and all code
+			for the web application is in our github repsitory <a href="https://github.com/arivers/fidoplankter">https://github.com/arivers/fidoplankter</a>.</p>
 		</div>
 
 			<div id="tabs-5" style="width: 780px; margin-left:0.5in;text-indent:-.5in">
